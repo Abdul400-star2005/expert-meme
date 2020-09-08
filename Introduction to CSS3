@@ -1,0 +1,161 @@
+Introduction to CSS3
+CSS3 is the latest version of CSS, a programming language used along side HTML for designing the contents of a webpage.
+
+What this tutorial covers
+This tutorial assumes you have a prior knowledge of HTML5.
+In this tutorial, you will learn the basics as well as the advanced of CSS, and later on, SCSS- a more complex form of CSS whose syntax is a little bit like javascript's.
+
+CSS Syntax
+A CSS stylesheet consists of a set of rules that are interpreted by the web browser and then applied to the corresponding elements. CSS's syntax is made up of style rules. Each rule is made up of two main parts:
+a selector(the html element to apply the style to), and one or more declaration. Each declaration is made up of a property and a value separated by comma and endimg with a semi-colon and are surrounded by curly braces as shown below:
+
+Play Project
+
+h1{color:blue;}
+{} text-align:center;}
+Note that you have to create a html page in your editor in order to get the result of your CSS codes.
+
+In the above example, h1 is the selector, color and text-align are the properties and blue and center are the values.
+
+Play Project
+
+Create a html page then style all the elements colors using rainbow pattern.
+CSS Selector Types
+Element Selectors
+These are selectors that matches all instance of the selector provided. For example, if we have twelve paragraph elements in a HTML document, using p as a selector will apply the styles to all the twelve paragraph. For example:
+
+Play Project
+
+css code
+
+<style>
+p{color:green;
+}
+</style>
+
+html code
+
+
+<p>One</p>
+<p>Two</p>
+<p>Three</p>
+<p>Four</p>
+<p>Five</p>
+<p>Six</p>
+<p>Seven</p>
+<p>Eight</p>
+<p>Nine</p>
+<p>Ten</p>
+<p>Eleven</p>
+<p>Twelve</p>
+After trying the above codes, you would notice that all the entire paragraphs became color blue, regardless of their position.
+
+Note that this tutorial assumes that you know the correct way of setting HTML and CSS elements as you were taught in HTML5.
+
+id Selectors
+These selectors target a specific HTML element with its id value preceeded by a hash(#). For example, we can set the ids of the paragraphs we used above as their numbers, then we use the ids as selectors to style each of them separately.
+
+Play Project
+
+css code
+
+#one{color:red;}
+#two{color:orange;}
+#three{color:green;}
+#four{color:blue;}
+#five{color:indigo;}
+#six{color:violet;}
+#seven{color:aqua;}
+#eight{color:navy;}
+#nine{color:pink;}
+#ten{color:fuchsia;}
+#eleven{color:gold;}
+#twelve{color:magento;}
+
+html code
+
+<p id="one">One</p>
+<p id="two">Two</p>
+<p id="three">Three</p>
+<p id="four">Four</p>
+<p id="five">Five</p>
+<p id="six">Six</p>
+<p id="seven">Seven</p>
+<p id="eight">Eight</p>
+<p id="nine">Nine</p>
+<p id="ten">Ten</p>
+<p id="eleven">Eleven</p>
+<p id="twelve">Twelve</p>
+Class selectors
+These are selector that target a class or multiple elements having same class name, using period symbol(.)such that a stylesheet set to that class will be applied to all of them with that class.In the example below, we would group the paragraphs into three.
+
+Play Project
+css code
+
+.one{color:green;}
+.two{color:white;}
+.three{color:green;}
+
+html code
+
+<p class="one">One</p>
+<p class="one">Two</p>
+<p class="one">Three</p>
+<p class="one">Four</p>
+<p class="two">Five</p>
+<p class="two">Six</p>
+<p class="two">Seven</p>
+<p class="two">Eight</p>
+<p class="three">Nine</p>
+<p class="three">Ten</p>
+<p class="three">Eleven</p>
+<p class="three">Twelve</p>
+Note that only one element can have an id name, and it can be any text including symbols, while several elements can have the same class name which can also be any character.
+
+Descendant selectors
+These are selector used in targetting an element inside another element. This is done by writing the tag name of the parent element then the child element, separated by whitespace. For example, if we have an anchor element inside a paragraph element, we can style it as follows:
+
+Play Project
+css code 
+
+p a{color:yellow;} 
+
+html code 
+
+<p>In order to find useful articles that would help your programmimg career, <a href="https://www.google.com/" target="_blank">Visit Google</a> and you would see a lot of expert programmers willing to help you.
+The p above is the paragraph which is the parent element while the a is the anchor element which is the child element.
+
+Adjacent Selectors
+These are used to target an element that comes immediately after another element. The element that comes first is the one that appears first while the element that comes last is the second in the stylesheet, and they are separated with a plus(+) symbol. In the example below, we styled the paragraph element that comes immediately after the h1 element.
+
+Play Project
+
+css code
+
+h1+p{color:yellow;}
+
+html code
+
+<h1> Welcome to CoolCode</h1>
+<p>Hi Im Abdulmotin</p>
+<p>Hi Im Ismail</p>
+<p>Hi Im Abdulmotin Ismail</p>
+As you would have noticed that only the first paragragh bacame yellow because it came immediately after the h1 element
+
+Grouping Selectors
+This is used in targetting various elements with or without class names. Here, you use a list of the elements to style as a selector. For example, you want to same style for a paragraph, a h1, and a div elements, you will write them as shown below
+
+Play Project
+
+css code
+
+h1,div,p{float:right;}
+
+html code
+
+<h1> Hello World</h1>
+<div>Hi my name is Abdulmotin Ismail. I am a web developer.Contact me at- teentechgenius.me@gmail.com</div>
+<p>Contact me at 09050759983</p>
+Note that every element separated by comma would have the same styling.
+
+If any part feels confusing, feeel free to drop a comment.
